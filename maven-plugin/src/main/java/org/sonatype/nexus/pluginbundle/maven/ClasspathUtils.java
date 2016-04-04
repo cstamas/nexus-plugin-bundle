@@ -92,7 +92,7 @@ public class ClasspathUtils
       buff.append(COLON).append(artifact.getClassifier());
     }
 
-    buff.append(COLON).append(artifact.getVersion());
+    buff.append(COLON).append(artifact.getBaseVersion());
 
     return buff.toString();
   }
@@ -113,7 +113,7 @@ public class ClasspathUtils
 
     buff.append(artifact.getArtifactId())
         .append(DASH)
-        .append(artifact.getVersion());
+        .append(artifact.getBaseVersion());
 
     if (!StringUtils.isBlank(artifact.getClassifier())) {
       buff.append(DASH).append(artifact.getClassifier());
